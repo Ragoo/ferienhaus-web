@@ -1,22 +1,47 @@
 {% load staticfiles %}
 <html>
-    <head>
-        <title>Ferienhaus Altfunnixsiel</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/ferienhausWeb.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Ferienhaus Altfunnixsiel</a></h1>
-        </div>
+<head>
+    <title>Ferienhaus Altfunnixsiel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+          integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/ferienhausWeb.css" %}">
+    <link rel="stylesheet" href="{% static "css/parts/top-nav.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+<div class="outer-background">
+    <div class="whole-body container">
+
+        {% include "ferienhausWeb/parts/top-nav.html" %}
+
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+
+                    {% block content %}
+                    {% endblock %}
+
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"
+        integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+        integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+        crossorigin="anonymous"></script>
+</body>
 </html>
+
+<!--
+                <li><a href="{% url 'ferienhaus' %}">Ferienhaus</a></li>
+                <li><a href="{% url 'belegugnskalender' %}">Belegungskalender</a></li>
+                -->
