@@ -1,6 +1,15 @@
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
+    <div class="home-greeting">
+        <h1> Herzlich Willkommen!</h1>
+        <p>Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
+            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
+            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
+        </p>
+    </div>
+    <h1 id="news">Neuigkeiten</h1>
+
     {% for post in posts %}
         <div class="post">
             <div class="date">

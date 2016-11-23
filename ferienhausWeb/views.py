@@ -14,5 +14,5 @@ def ferienhaus(request):
 def ferienhaus_galerie(request):
     return render(request, 'ferienhausWeb/ferienhaus_galerie.html', {})
 
-def belegugnskalender(request):
-    return render(request, 'ferienhausWeb/belegugnskalender.html', {})
+def belegungskalender(request):
+    return render(request, 'ferienhausWeb/belegungskalender.html', {})

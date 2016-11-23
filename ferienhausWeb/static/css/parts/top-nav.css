@@ -1,9 +1,49 @@
-.navbar a{
-    color:white;
-    font-family:"Arial Black";
-    font-size:1.5em;
+.navbar a {
+    color: white;
+    font-family: "Arial Black";
+    font-size: 1.5em;
 }
 
 .navbar-light {
     background-color: #307195;
+}
+
+.navbar-nav .nav-item + .nav-item {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+.home_button_container{
+    float:left;
+    z-index: 1000;
+    position:absolute; bottom:0;
+}
+
+.outer-nav {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+#home_button {
+    border-radius: 25px 25px 0 25px;
+    width: 100px;
+    background-color: #307195;
+    padding: 8px;
+}
+
+.navbar {
+    border-radius: 0 25px 25px 0;
+}
+
+.wrapper-nav {
+    position:relative;
+    height:100px;
+    width: 1000px;
+    margin: 0;
 }
