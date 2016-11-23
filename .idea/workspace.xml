@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fb9414-a490-49ba-8507-fbfe55f6d71e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/js/navbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/parts/top-nav.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/parts/top-nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/top-nav.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/top-nav.html" />
     </list>
     <ignored path="ferienhaus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/ferienhausWeb/static/css/parts/top-nav.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
-              <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -1045,7 +1041,7 @@
     <entry file="file://$PROJECT_DIR$/ferienhausWeb/static/css/parts/top-nav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
-          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
           <folding />
         </state>
       </provider>
