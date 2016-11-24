@@ -16,3 +16,6 @@ def ferienhaus_galerie(request):
 
 def belegungskalender(request):
     return render(request, 'ferienhausWeb/belegungskalender.html', {})
+
+def umgebung(request):
+    return render(request, 'ferienhausWeb/umgebung.html', {})

@@ -1,9 +1,13 @@
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
-    <div>
-                    <a href="{% url 'ferienhaus_galerie' %}">Ferienhaus Galerie</a>
+    <div class="sub-nav-active">
+     <a href="{% url 'ferienhaus' %}">Details</a>
     </div>
+    <div class="sub-nav">
+     <a href="{% url 'ferienhaus_galerie' %}">Galerie</a>
+    </div>
+
         <div>
             <h1> Das Ferienhaus</h1>
         <p>Hier werden die Details des Ferienhauses stehen</p>

@@ -1,0 +1,85 @@
+.tripList {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.tripList li {
+    float: left;
+    display: inline-block;
+    background-color: #307195;
+    padding: 5px 10px;
+    margin: 0 0 20px 0;
+    border: solid 2px #3f3f3f;
+    color: white;
+}
+
+ul.tripList li a {
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+ul.tripList li:hover {
+    background-color: #315a7e;
+}
+
+.sub-nav-active {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 5px 10px;
+    margin: 0 0 20px 0;
+    border-top: solid 2px #307195;
+    border-bottom: solid 2px #307195;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+}
+
+.sub-nav-active a {
+    text-decoration: none;
+    color: #307195;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.sub-nav:hover {
+}
+
+iframe {
+    margin: 20px 20px 0 20px;
+    width: 100%;
+    height: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    .tripList {
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding:0;
+    }
+    ul.tripList li {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding-top:10px;
+        padding-bottom:10px;
+        border-top: none;
+        text-align:center;
+    }
+
+    ul.tripList li a {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+.outer-nav {
+    margin: 0;
+    padding-top: 35px;
+}
+
+
+}
