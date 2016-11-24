@@ -10,13 +10,12 @@
         </a>
     </div>
 
-    <div class="outer-nav">
+    <div class="outer-nav" id="outerNav">
 
         <ul class="topnav" id="myTopnav">
-            <li>
-                <a href="{% url 'ferienhaus' %}">Ferienhaus</a>
-            </li>
-            <li><a href="#news">Belegungskalender</a></li>
+            <li><a href="/">Startseite</a></li>
+            <li><a href="{% url 'ferienhaus' %}">Ferienhaus</a></li>
+            <li><a href="{% url 'belegungskalender' %}">Belegungskalender</a></li>
             <li><a href="#contact">Umgebung</a></li>
             <li><a href="#about">Gästebuch</a></li>
             <li class="icon">

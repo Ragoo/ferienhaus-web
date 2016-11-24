@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<div class="side-nav">
+    <p> Galerie</p>
+</div>
+
+<div class="weather-widget">
+    <div id="wcom-8d474225b8cca468c34ee3c701a730b7" class="wcom-default w300x250">
+        <link rel="stylesheet" href="{% static "css/parts/wetterbtn.css" %}">
+        <div class="wcom-city"><a style="color: #000"
+                                  href="http://www.wetter.com/deutschland/wittmund/altfunnixsiel/DE0011769005.html"
+                                  target="_blank" rel="nofollow" title="Wetter Altfunnixsiel">Wetter Altfunnixsiel</a>
+        </div>
+        <div id="wcom-8d474225b8cca468c34ee3c701a730b7-weather"></div>
+        <script type="text/javascript" src="//static1.wetter.com/woys/5/js/w.js"></script>
+        <script type="text/javascript">_wcomWidget({
+            id: 'wcom-8d474225b8cca468c34ee3c701a730b7',
+            location: 'DE0011769005',
+            format: '300x250',
+            type: 'summary'
+        });</script>
+    </div>
+</div>

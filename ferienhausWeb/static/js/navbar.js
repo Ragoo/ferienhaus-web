@@ -10,4 +10,12 @@ function myFunction() {
     } else {
         x.className = "topnav";
     }
+    
+    var y = document.getElementById("outerNav");
+    if (y.className === "outer-nav") {
+        y.className += " responsive";
+    } else {
+        y.className = "outer-nav";
+    }
+    
 }

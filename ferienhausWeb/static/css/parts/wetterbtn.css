@@ -1,0 +1,87 @@
+.wcom-default a, .wcom-default div, .wcom-default img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: none;
+    outline: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    width: auto;
+    height: auto;
+    position: static;
+    display: inline;
+    line-height: normal;
+    text-decoration: none
+}
+
+.wcom-default div {
+    display: block;
+}
+
+.wcom-default {
+    font-family: Verdana, Geneva, sans-serif;
+    overflow: hidden;
+    position: relative;
+    box-sizing: content-box !important
+}
+
+.wcom-city {
+    max-height: 28px !important;
+    overflow: hidden
+}
+
+.wcom-city, .wcom-city a {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-decoration: none
+}
+
+.wcom-city a:hover {
+    text-decoration: none
+}
+
+.w300x250 {
+    font-size: 11px;
+    padding: 10px !important;
+    max-width: 280px !important;
+    max-height: 230px !important;
+    width: 280px !important;
+    height: 230px !important
+}
+
+.w300x250 .wcom-city {
+    max-height: 18px !important;
+    overflow: hidden
+}
+
+.w150x150 {
+    font-size: 10px;
+    padding: 5px !important;
+    max-width: 140px !important;
+    max-height: 140px !important;
+    width: 140px !important;
+    height: 140px !important
+}
+
+.w150x150 .wcom-city {
+    min-height: 20px !important;
+    max-height: 28px !important;
+    overflow: hidden
+}
+
+.w150x150 .wcom-city, .w150x150 .wcom-city a {
+    font-size: 12px
+}
+
+.weather-widget {
+    border-radius: 25px;
+    border: solid 1px black;
+    background-color: rgba(255, 255, 255, 0.57);
+}
+
+[title~="wetter.com"] {
+    visibility:hidden;
+}
