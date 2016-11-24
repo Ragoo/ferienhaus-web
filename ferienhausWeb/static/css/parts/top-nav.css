@@ -47,7 +47,7 @@ ul.topnav li a {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 26px;
+    padding: 14px 10px;
     padding-right: 56px;
     text-decoration: none;
     transition: 0.3s;
@@ -84,7 +84,7 @@ ul.topnav li.icon {
 }
 
 /* When the screen is less than 425 pixels wide, hide all list items. Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 500px) {
     .outer-nav {
         width: 100%;
     }
@@ -112,6 +112,11 @@ ul.topnav li.icon {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width: 1200px) {
+
+.topnav {
+    z-index: 10000;
+}
+
     ul.topnav.responsive {
         position: relative;
         float: none;
@@ -124,9 +129,10 @@ ul.topnav li.icon {
         top: 0;
     }
 
-    ul.topnav.responsive li:not(:first-child) {
+
+    ul.topnav.responsive li {
         float: none;
-        display: inline;
+        display: table-row;
     }
 
     ul.topnav.responsive li a {
@@ -135,7 +141,5 @@ ul.topnav li.icon {
         margin-right: 0;
     }
 
-    .outer-nav.responsive {
-    }
 
 }
