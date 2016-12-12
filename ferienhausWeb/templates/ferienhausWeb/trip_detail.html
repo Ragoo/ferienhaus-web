@@ -1,0 +1,15 @@
+{% extends 'ferienhausWeb/umgebung.html' %}
+
+<ul class="tripList" id="inner-content-div">
+    {% for trip in trips %}
+        <li>
+            <a href="{% url 'trip_detail' pk=trip.pk %}">{{ trip.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% block trip_detail %}
+    <div class="trip">
+        <h1>{{ trip.title }}</h1>
+        <p>{{ trip.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

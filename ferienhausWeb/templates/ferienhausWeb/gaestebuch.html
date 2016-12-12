@@ -1,0 +1,23 @@
+{% extends 'ferienhausWeb/base.html' %}
+
+{% block content %}
+    <div>
+        <h1> Das Gästebuch</h1>
+    <p>
+        Schreiben Sie uns hier über Ihre Erfahrungen, ihr Feedback oder hinterlassen Sie Grüße!
+    </p>
+
+    </div>
+
+    {% for guestbook_entry in guestbook_entries %}
+        <div class="guestbook_entry">
+            <div class="guestbook_entry_date">
+                {{ guestbook_entry.created_date }}
+            </div>
+            <div class="guestbook_entry_inner">
+                <h3>{{ guestbook_entry.title }}</h3>
+                <p>{{ guestbook_entry.text|linebreaksbr }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

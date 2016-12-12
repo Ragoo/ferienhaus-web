@@ -1,46 +1,22 @@
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
-        <ul class="tripList" id="inner-content-div">
+    <ul class="tripList" id="inner-content-div">
+        {% for trip in trips %}
             <li>
-                <a href="{% url 'ferienhaus' %}">Altfunnixsiel</a>
+                <a href="{% url 'trip_detail' pk=trip.pk %}">{{ trip.title }}</a>
             </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Caroliensiel</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus_galerie' %}">Bensersiel</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Die Inseln</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Wilhelmshaven</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Jever</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Wittmund</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Neuharlingersiel</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Dornumersiel</a>
-            </li>
-            <li>
-                <a href="{% url 'ferienhaus' %}">Horumersiel</a>
-            </li>
-        </ul>
+        {% endfor %}
+    </ul>
 
-
+    {% block trip_detail %}
+    {% endblock %}
 
     <div class="tripsBase">
         <h1> Ausflugsziele</h1>
-        <!--<iframe
+        <iframe
                 src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=+&amp;q=surat&amp;ie=UTF8&amp;hq=&amp;hnear=Surat,+Gujarat&amp;
-                ll=21.195,72.819444&amp;spn=0.36299,0.676346&amp;t=m&amp;z=11&amp;output=embed"></iframe>-->
+                ll=21.195,72.819444&amp;spn=0.36299,0.676346&amp;t=m&amp;z=11&amp;output=embed"></iframe>
 
     </div>
 

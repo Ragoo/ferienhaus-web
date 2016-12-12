@@ -39,16 +39,16 @@ ul.topnav li:first-child {
 
 /* Float the list items side by side */
 ul.topnav li {
-    float: left;
+    display:inline-block;
+    text-align: center;
 }
 
 /* Style the links inside the list items */
 ul.topnav li a {
     display: inline-block;
+    text-align:center;
     color: white;
-    text-align: center;
-    padding: 14px 10px;
-    padding-right: 56px;
+    padding: 14px 25px;
     text-decoration: none;
     transition: 0.3s;
     font-size: 25px;
@@ -75,6 +75,9 @@ ul.topnav li.icon {
     }
     ul.topnav li:not(:first-child) {
         display: none;
+    }
+
+    ul.topnav li { float: left;
     }
 
     ul.topnav li.icon {
