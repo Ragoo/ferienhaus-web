@@ -1,3 +1,4 @@
+# coding=utf-8
 from django import forms
 from .models import Post,Trip,GuestBook,GaleryImage
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
