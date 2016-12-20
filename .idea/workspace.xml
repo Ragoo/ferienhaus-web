@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fb9414-a490-49ba-8507-fbfe55f6d71e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/parts/lightbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/js/lightbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/galeryimage_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/trip_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ferienhaus.iml" afterPath="$PROJECT_DIR$/.idea/ferienhaus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhaus/settings.py" afterPath="$PROJECT_DIR$/ferienhaus/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/admin.py" afterPath="$PROJECT_DIR$/ferienhausWeb/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/forms.py" afterPath="$PROJECT_DIR$/ferienhausWeb/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/models.py" afterPath="$PROJECT_DIR$/ferienhausWeb/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/parts/trips.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/parts/trips.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/js/jquery.slimscroll.min.js" afterPath="$PROJECT_DIR$/ferienhausWeb/static/js/jquery.slimscroll.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/base.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus_galerie.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus_galerie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/trip_detail.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/trip_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/urls.py" afterPath="$PROJECT_DIR$/ferienhausWeb/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/views.py" afterPath="$PROJECT_DIR$/ferienhausWeb/views.py" />
     </list>
     <ignored path="ferienhaus.iws" />
     <ignored path=".idea/workspace.xml" />
