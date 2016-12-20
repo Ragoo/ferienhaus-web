@@ -1,0 +1,14 @@
+{% extends 'ferienhausWeb/base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+
+
+<h1>Galerie Bild hochladen</h1>
+<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.media}}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}
+

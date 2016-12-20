@@ -2,14 +2,20 @@
 
 <ul class="tripList" id="inner-content-div">
     {% for trip in trips %}
-        <li>
-            <a href="{% url 'trip_detail' pk=trip.pk %}">{{ trip.title }}</a>
-        </li>
+    <li>
+        <a href="{% url 'trip_detail' pk=trip.pk %}">{{ trip.title }}</a>
+    </li>
     {% endfor %}
 </ul>
 {% block trip_detail %}
-    <div class="trip">
-        <h1>{{ trip.title }}</h1>
-        <p>{{ trip.text|linebreaksbr }}</p>
-    </div>
+<div class="trip">
+    {% if user.is_authenticated %}
+    <a class="btn btn-default admin-button" href="{% url 'trip_edit' pk=trip.pk %}">Bearbeiten</a>
+    <a class="btn btn-default admin-button"
+       onclick="return confirm('Sicher, dass diese Umgebung gelöscht werden soll?')"
+       href="{% url 'trip_remove' pk=trip.pk %}">Entfernen</a>
+    {% endif %}
+    <h1>{{ trip.title }}</h1>
+    <p>{{ trip.text|safe }}</p>
+</div>
 {% endblock %}

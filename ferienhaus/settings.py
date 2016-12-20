@@ -137,6 +137,11 @@ CKEDITOR_CONFIGS = {
             'image2'
         ]),
     },
+    'user-edit': {
+        'toolbar': 'Basic',
+        'height': 300,
+        'width': 700,
+    },
 }
 
 LOGIN_REDIRECT_URL = '/'

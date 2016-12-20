@@ -1,23 +1,39 @@
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
-    <div>
-        <h1> Das Gästebuch</h1>
+<div>
+    <h1> Das Gästebuch</h1>
     <p>
         Schreiben Sie uns hier über Ihre Erfahrungen, ihr Feedback oder hinterlassen Sie Grüße!
     </p>
+    <div id="guestbook-image"></div>
 
+</div>
+
+{% for guestbook_entry in guestbook_entries %}
+<div class="guestbook_entry">
+    <div class="guestbook_entry_date">
+        {{ guestbook_entry.created_date }}
     </div>
-
-    {% for guestbook_entry in guestbook_entries %}
-        <div class="guestbook_entry">
-            <div class="guestbook_entry_date">
-                {{ guestbook_entry.created_date }}
-            </div>
-            <div class="guestbook_entry_inner">
-                <h3>{{ guestbook_entry.title }}</h3>
-                <p>{{ guestbook_entry.text|linebreaksbr }}</p>
-            </div>
-        </div>
-    {% endfor %}
+    <div class="guestbook_entry_inner">
+        <h3>{{ guestbook_entry.title }}</h3>
+        <p class="guestbook-author">von {{ guestbook_entry.author }}</p>
+        <p>{{ guestbook_entry.text|safe }}</p>
+    </div>
+    {% if user.is_authenticated %}
+    <a class="btn btn-default admin-button"
+       style="float:right"
+       onclick="return confirm('Sicher, dass dieser Eintrag gelöscht werden soll?')"
+       href="{% url 'guestbook_remove' pk=guestbook_entry.pk %}">Entfernen</a>
+    {% endif %}
+</div>
+{% endfor %}
+<div id="guestbook-form">
+    <h3>Gästebucheintrag erstellen</h3>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.media}}
+        {{ form.as_p }}
+        <button type="submit" onclick="return confirm('Wollen Sie diesen Gästebucheintrag wirklich hinzufügen?')" class="save btn btn-default">Eintrag hinzufügen</button>
+    </form>
+</div>
 {% endblock %}

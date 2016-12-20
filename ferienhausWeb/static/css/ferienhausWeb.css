@@ -104,3 +104,108 @@ body {
     color:black;
     border:none;
 }
+
+.guestbook-author {
+    color:black;
+    font-weight:bold;
+}
+
+.sub-nav-active {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 5px 10px;
+    margin: 0 0 20px 0;
+    border-top: solid 2px #307195;
+    border-bottom: solid 2px #307195;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+}
+
+.sub-nav-active a {
+    text-decoration: none;
+    color: #307195;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sub-nav {
+    display: inline-block;
+    background-color: #307195;
+    padding: 5px 10px;
+    margin: 0 0 20px 0;
+    border-top: solid 2px #307195;
+    border-bottom: solid 2px #307195;
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#guestbook-image {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c9/Jochen_Schmidt_2014_Eintrag_G%C3%A4stebuch_der_Stadt_K%C3%B6ln.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 25px 25px 50px 0 rgba(255, 255, 255, 0.57) inset, -25px -25px 50px 0 rgba(255, 255, 255, 0.57) inset;
+    width: 600px;
+    height: 300px;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+#guestbook-form h3 {
+    color:black;
+}
+
+#guestbook-form {
+    margin-top: 30px;
+}
+
+.galery-image {
+    width:200px;
+    height: auto;
+}
+
+.image-delete-btn{
+    background-color:red;
+    position:relative;
+    right: 0px;
+    bottom: 40px;
+
+}
+
+.galery-list {
+    z-index: 100000;
+    list-style-type: none;
+    clear: both;
+}
+
+ul.galery-list li {
+    display: inline-block;
+    border: solid 2px #3f3f3f;
+    margin: 0 5px 10px 0;
+    color: white;
+}
+
+ul.galery-list li a {
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+ul.galery-list li:hover {
+    background-color: #315a7e;
+}
+
+.newImageBtn {
+    background-color: #315a7e;
+    height:50px;
+    width:100px;
+}
