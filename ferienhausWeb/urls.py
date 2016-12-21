@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^ferienhaus_beschreibung/$', views.ferienhaus, name='ferienhaus'),
     url(r'^ferienhaus_galerie/$', views.ferienhaus_galerie, name='ferienhaus_galerie'),
-    url(r'^belegungskalender/$', views.belegungskalender, name='belegungskalender'),
+    #url(r'^belegungskalender/$', views.belegungskalender, name='belegungskalender'),
     url(r'^umgebung/$', views.umgebung, name='umgebung'),
     url(r'^umgebung/(?P<pk>\d+)/$', views.trip_detail, name='trip_detail'),
     url(r'^gaestebuch/$', views.guestbook, name='guestbook'),
@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^galeryimage/new/$', views.galeryimage_new, name='galeryimage_new'),
     url(r'^galeryimage/(?P<pk>\d+)/remove/$', views.galeryimage_remove, name='galeryimage_remove'),
 
-    url(r'^agenda/$', TemplateView.as_view(template_name='agenda.html')),
+    url(r'^belegungskalender/$', TemplateView.as_view(template_name='ferienhausWeb/belegungskalender.html'),name='belegungskalender'),
     url(r'^eventsXML/$', views.eventsXML, name='eventsXML'),
     url(r'^dataprocessor/$', views.dataprocessor, name='dataprocessor'),
 ]

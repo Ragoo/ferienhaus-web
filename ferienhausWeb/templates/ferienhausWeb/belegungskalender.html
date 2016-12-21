@@ -1,8 +1,58 @@
-{% extends 'ferienhausWeb/base.html' %}
-
+{% extends "ferienhausWeb/base.html" %}
 {% block content %}
-        <div>
-            <h1> Der Belegungskalender</h1>
-        <p>So ist das Ferienhaus dann also belegt, aha!</p>
-        </div>
-{% endblock %}
+{% load staticfiles %}
+	<script src="{% static "agenda/dhtmlxscheduler.js" %}" type="text/javascript" charset="utf-8"></script>
+	<script src="{% static "agenda/ext/dhtmlxscheduler_year_view.js" %}" ></script>
+	<link rel="stylesheet" href="{% static "agenda/dhtmlxscheduler_flat.css" %}" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	
+<style type="text/css" media="screen">
+	html, body{
+		margin:0px;
+		padding:0px;
+		height:100%;
+	}	
+</style>
+
+<script type="text/javascript" charset="utf-8">
+	function init() {
+	    {% if not user.is_authenticated %}
+	    scheduler.config.readonly = true;
+	    {% endif %}
+	    scheduler.locale.labels.year_tab ="Jahr";
+	    scheduler.locale.labels.month_tab ="Monat";
+		scheduler.config.xml_date="%Y-%m-%d %H:%i";
+		scheduler.config.resize_month_events = true;
+		scheduler.init('scheduler_here',new Date(),"month");
+		scheduler.config.CSRF_Token = "{{ csrf_token }}" ;
+		scheduler.load("{% url 'eventsXML' %}");
+
+		var dp = new dataProcessor("{% url 'dataprocessor' %}");
+		dp.init(scheduler);
+		dp.setTransactionMode("POST",false)
+
+		
+	}
+</script>
+
+
+
+    <body onload="init();">
+
+        <h1>Belegungskalender</h1>
+
+	<div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:67%;'>
+    <div class="dhx_cal_navline">
+        <div class="dhx_cal_prev_button">&nbsp;</div>
+        <div class="dhx_cal_next_button">&nbsp;</div>
+        <div class="dhx_cal_today_button"></div>
+        <div class="dhx_cal_date"></div>
+        <div class="dhx_cal_tab" name="month_tab" ></div>
+        <div class="dhx_cal_tab" name="year_tab" ></div>
+    </div>
+    <div class="dhx_cal_header"></div>
+    <div class="dhx_cal_data"></div>
+</div>
+
+    <p>Angaben sind ohne Gewähr</p>
+{% endblock content %}

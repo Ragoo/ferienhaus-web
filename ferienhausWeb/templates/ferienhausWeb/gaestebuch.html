@@ -28,6 +28,24 @@
     {% endif %}
 </div>
 {% endfor %}
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if guestbook_entries.has_previous %}
+            <a href="?page={{ guestbook_entries.previous_page_number }}">vorherige Seite</a>
+        {% endif %}
+
+        <span class="current">
+            Seite {{ guestbook_entries.number }} von {{ guestbook_entries.paginator.num_pages }}.
+        </span>
+
+        {% if guestbook_entries.has_next %}
+            <a href="?page={{ guestbook_entries.next_page_number }}">nächste Seite</a>
+        {% endif %}
+    </span>
+    </div>
+
+
 <div id="guestbook-form">
     <h3>Gästebucheintrag erstellen</h3>
     <form method="POST" class="post-form">{% csrf_token %}

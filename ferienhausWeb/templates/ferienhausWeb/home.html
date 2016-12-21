@@ -34,7 +34,7 @@
 
     </div>
     {% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="btn btn-default admin-button">Neu erstellen</a>
+        <a href="{% url 'post_new' %}" class="btn btn-default admin-button">Neu erstellen</a>
     {% endif %}
     <h1 id="news">Neuigkeiten</h1>
 
@@ -49,8 +49,26 @@
             </div>
             {% if user.is_authenticated %}
                 <a class="btn btn-default admin-button" href="{% url 'post_edit' pk=post.pk %}">Bearbeiten</a>
-                <a class="btn btn-default admin-button" onclick="return confirm('Sicher, dass diese Neuigkeit gelöscht werden soll?')" href="{% url 'post_remove' pk=post.pk %}">Entfernen</a>
+                <a class="btn btn-default admin-button"
+                   onclick="return confirm('Sicher, dass diese Neuigkeit gelöscht werden soll?')"
+                   href="{% url 'post_remove' pk=post.pk %}">Entfernen</a>
             {% endif %}
         </div>
     {% endfor %}
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">vorherige Seite</a>
+        {% endif %}
+
+        <span class="current">
+            Seite {{ posts.number }} von {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">nächste Seite</a>
+        {% endif %}
+    </span>
+    </div>
 {% endblock %}

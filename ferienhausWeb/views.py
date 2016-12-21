@@ -8,13 +8,25 @@ from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 from django.template import RequestContext
 from .models import *
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render
 
 
 # Create your views here.
 
 def home(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    paginator = Paginator(post_list, 3)  # Show 3 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        posts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        posts = paginator.page(paginator.num_pages)
     return render(request, 'ferienhausWeb/home.html', {'posts': posts})
 
 
@@ -43,7 +55,19 @@ def trip_detail(request, pk):
 
 
 def guestbook(request):
-    guestbook_entries = GuestBook.objects.order_by('-created_date')
+    #guestbook_entries = GuestBook.objects.order_by('-created_date')
+    guestbook_list = GuestBook.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
+    paginator = Paginator(guestbook_list, 3)  # Show 3 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        guestbook_entries = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        guestbook_entries = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        guestbook_entries = paginator.page(paginator.num_pages)
     if request.method == "POST":
         form = GuestbookForm(request.POST)
         if form.is_valid():
