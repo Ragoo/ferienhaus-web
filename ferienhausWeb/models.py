@@ -46,7 +46,7 @@ class GuestBook(models.Model):
     created_date = models.DateTimeField(
         default=timezone.now)
 
-    def ___str___(self):
+    def __str__(self):
         return str(self.author + " "+ str(self.created_date) + " "+ self.title)
 
 class GaleryImage(models.Model):
@@ -56,5 +56,11 @@ class GaleryImage(models.Model):
     image = models.ImageField(upload_to=get_image_path, default="")
 
 
-    def ___str___(self):
+    def __str__(self):
         return self.title
+
+class Event(models.Model):
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    text = models.CharField(max_length=30)
+    details = models.CharField(max_length=50)

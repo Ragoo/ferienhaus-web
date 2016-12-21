@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
@@ -22,4 +23,8 @@ urlpatterns = [
 
     url(r'^galeryimage/new/$', views.galeryimage_new, name='galeryimage_new'),
     url(r'^galeryimage/(?P<pk>\d+)/remove/$', views.galeryimage_remove, name='galeryimage_remove'),
+
+    url(r'^agenda/$', TemplateView.as_view(template_name='agenda.html')),
+    url(r'^eventsXML/$', views.eventsXML, name='eventsXML'),
+    url(r'^dataprocessor/$', views.dataprocessor, name='dataprocessor'),
 ]
