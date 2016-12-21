@@ -38,6 +38,9 @@ def ferienhaus_galerie(request):
     galeryimage = GaleryImage.objects.order_by('title')
     return render(request, 'ferienhausWeb/ferienhaus_galerie.html', {'galeryimage': galeryimage})
 
+def preise(request):
+    return render(request, 'ferienhausWeb/preise.html', {})
+
 
 def belegungskalender(request):
     return render(request, 'ferienhausWeb/belegungskalender.html', {})

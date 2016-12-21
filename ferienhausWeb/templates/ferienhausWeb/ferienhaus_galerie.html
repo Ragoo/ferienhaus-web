@@ -1,36 +1,41 @@
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
-<div class="sub-nav">
-    <a href="{% url 'ferienhaus' %}">Details</a>
-</div>
-<div class="sub-nav-active">
-    <a href="{% url 'ferienhaus_galerie' %}">Galerie</a>
-</div>
-<div>
-    <h1> Galerie</h1>
-    <p>Hier sieht man dann die schönen Bildchen, ne</p>
-</div>
-<ul class="galery-list" id="galery">
-    {% for galeryimage in galeryimage %}
-    {% if galeryimage.image != "" %}
-    <li>
-        <a href="{{galeryimage.image.url}}" data-lightbox="galery">
-            <img class="galery-image" src="{{galeryimage.image.url}}">
-        </a>
-        {% if user.is_authenticated %}
-         <a class="btn btn-default image-delete-btn"
-       onclick="return confirm('Sicher, dass dieses Bild gelöscht werden soll?')"
-       href="{% url 'galeryimage_remove' pk=galeryimage.pk %}">X</a>
-        {% endif %}
+    <div class="sub-nav">
+        <a href="{% url 'ferienhaus' %}">Details</a>
+    </div>
+    <div class="sub-nav-active">
+        <a href="{% url 'ferienhaus_galerie' %}">Galerie</a>
+    </div>
+    <div class="sub-nav">
+        <a href="{% url 'preise' %}">Preise</a>
+    </div>
 
-    </li>
-    {% endif %}
-    {% endfor %}
-    {% if user.is_authenticated %}
-    <li class="newImageBtn">
-        <a href="{% url 'galeryimage_new' %}">Neu...</a></li>
-    {% endif %}
-</ul>
+    <div>
+        <h1> Galerie</h1>
+    </div>
+
+
+    <ul class="galery-list" id="galery">
+        {% for galeryimage in galeryimage %}
+            {% if galeryimage.image != "" %}
+                <li>
+                    <a href="{{ galeryimage.image.url }}" data-lightbox="galery">
+                        <img class="galery-image" src="{{ galeryimage.image.url }}">
+                    </a>
+                    {% if user.is_authenticated %}
+                        <a class="btn btn-default image-delete-btn"
+                           onclick="return confirm('Sicher, dass dieses Bild gelöscht werden soll?')"
+                           href="{% url 'galeryimage_remove' pk=galeryimage.pk %}">X</a>
+                    {% endif %}
+
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if user.is_authenticated %}
+            <li class="newImageBtn">
+                <a href="{% url 'galeryimage_new' %}">Neu...</a></li>
+        {% endif %}
+    </ul>
 
 {% endblock %}
