@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fb9414-a490-49ba-8507-fbfe55f6d71e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/img/gm-icons/beach-export.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/img/gm-icons/home-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" />
     </list>
     <ignored path="ferienhaus.iws" />
@@ -43,8 +39,8 @@
       <file leaf-file-name="umgebung.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="78" column="95" lean-forward="false" selection-start-line="78" selection-start-column="95" selection-end-line="78" selection-end-column="95" />
+            <state relative-caret-position="246">
+              <caret line="61" column="88" lean-forward="false" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -681,7 +677,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26309523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1086,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="78" column="95" lean-forward="false" selection-start-line="78" selection-start-column="95" selection-end-line="78" selection-end-column="95" />
+        <state relative-caret-position="246">
+          <caret line="61" column="88" lean-forward="false" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
           <folding />
         </state>
       </provider>
