@@ -215,3 +215,7 @@ ul.galery-list li:hover {
    height: 600px;
    background-color: grey;
  }
+
+#Kontakt {
+    text-align:right;
+}

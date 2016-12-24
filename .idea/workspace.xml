@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fb9414-a490-49ba-8507-fbfe55f6d71e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/img/01_Das Haus.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ferienhausWeb/static/img/gaestebuch.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ferienhausWeb/static/img/background_wattenmeer.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" afterPath="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html" afterPath="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html" />
     </list>
     <ignored path="ferienhaus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,19 +37,94 @@
       <file leaf-file-name="belegungskalender.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/belegungskalender.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="17">
               <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="umgebung.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gaestebuch.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="umgebung.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="552">
               <caret line="61" column="88" lean-forward="false" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ferienhaus.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="98" lean-forward="false" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preise.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <element signature="e#574#580#0#HTML" expanded="true" />
+                <element signature="e#713#719#1#HTML" expanded="true" />
+                <element signature="e#840#846#1#HTML" expanded="true" />
+                <element signature="e#1025#1031#1#HTML" expanded="true" />
+                <element signature="e#1138#1144#0#HTML" expanded="true" />
+                <element signature="e#1148#1154#0#HTML" expanded="true" />
+                <element signature="e#1261#1267#0#HTML" expanded="true" />
+                <element signature="e#1271#1277#0#HTML" expanded="true" />
+                <element signature="e#1467#1473#1#HTML" expanded="true" />
+                <element signature="e#1580#1586#0#HTML" expanded="true" />
+                <element signature="e#1589#1595#0#HTML" expanded="true" />
+                <element signature="e#1702#1708#0#HTML" expanded="true" />
+                <element signature="e#1711#1717#0#HTML" expanded="true" />
+                <element signature="e#1895#1901#1#HTML" expanded="true" />
+                <element signature="e#2008#2014#0#HTML" expanded="true" />
+                <element signature="e#2017#2023#0#HTML" expanded="true" />
+                <element signature="e#2130#2136#0#HTML" expanded="true" />
+                <element signature="e#2139#2145#0#HTML" expanded="true" />
+                <element signature="e#2512#2518#0#HTML" expanded="true" />
+                <element signature="e#2646#2652#0#HTML" expanded="true" />
+                <element signature="e#2814#2820#0#HTML" expanded="true" />
+                <element signature="e#2947#2953#0#HTML" expanded="true" />
+                <element signature="e#3110#3116#0#HTML" expanded="true" />
+                <element signature="e#3250#3256#0#HTML" expanded="true" />
+                <element signature="e#3404#3410#0#HTML" expanded="true" />
+                <element signature="e#3548#3554#1#HTML" expanded="true" />
+                <element signature="e#3723#3729#0#HTML" expanded="true" />
+                <element signature="e#3863#3869#0#HTML" expanded="true" />
+                <element signature="e#4017#4023#0#HTML" expanded="true" />
+                <element signature="e#4148#4154#0#HTML" expanded="true" />
+                <element signature="e#4156#4162#0#HTML" expanded="true" />
+                <element signature="e#4341#4347#0#HTML" expanded="true" />
+                <element signature="e#4354#4360#0#HTML" expanded="true" />
+                <element signature="e#4428#4434#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,9 +132,21 @@
       <file leaf-file-name="ferienhausWeb.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
-              <caret line="214" column="14" lean-forward="false" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+            <state relative-caret-position="574">
+              <caret line="219" column="21" lean-forward="false" selection-start-line="219" selection-start-column="21" selection-end-line="219" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,10 +173,14 @@
       <find>year_event</find>
       <find>year_month</find>
       <find>body</find>
-      <find>body</find>
       <find>overflow</find>
       <find>overflow: hidden</find>
       <find>monday</find>
+      <find>#278290</find>
+      <find>color</find>
+      <find>#5AA2AD</find>
+      <find>bgcolor</find>
+      <find>guestb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,7 +193,6 @@
         <option value="$PROJECT_DIR$/ferienhausWeb/static/js/navbar.js" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/js/weather.js" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/css/parts/wetterbtn.css" />
-        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/umgebung.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/js/jquery.jscrollpane.min.js" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/css/parts/top-nav.css" />
@@ -118,16 +216,17 @@
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/agenda.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/agenda/dhtmlxscheduler_flat.css" />
         <option value="$PROJECT_DIR$/ferienhausWeb/static/agenda/dhtmlxscheduler.js" />
-        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/belegungskalender.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/urls.py" />
         <option value="$PROJECT_DIR$/ferienhausWeb/views.py" />
-        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html" />
-        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html" />
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus_galerie.html" />
-        <option value="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
         <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html" />
+        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html" />
+        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html" />
+        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html" />
+        <option value="$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css" />
+        <option value="$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html" />
       </list>
     </option>
   </component>
@@ -330,32 +429,6 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gm-icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ferienhaus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ferienhaus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ferienhausWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -387,17 +460,18 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\templates" />
-      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static" />
-      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\templates\ferienhausWeb" />
       <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\templates\ferienhausWeb\parts" />
       <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\agenda" />
       <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\js" />
       <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\img" />
+      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\templates" />
+      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static" />
+      <recent name="C:\Users\Philipp\PycharmProjects\ferienhaus\ferienhausWeb\static\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -513,6 +587,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -676,8 +756,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26309523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -767,13 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
           <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="81" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,32 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="698">
           <caret line="1453" column="25" lean-forward="true" selection-start-line="1453" selection-start-column="25" selection-end-line="1453" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1482346405201" expanded="true" signature="108078:108176" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="108411:108436" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="108448:108454" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="108586:108686" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="108846:108898" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="124469:124486" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="124851:124868" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="125313:125330" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="125347:125358" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="128144:128190" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="128239:128274" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="128277:128283" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="128283:128290" ph="–" />
-            <marker date="1482346405201" expanded="true" signature="128290:128296" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="129269:129275" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="140153:140165" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="142038:142044" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="152007:152013" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="154740:154746" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="154785:154791" ph=" " />
-            <marker date="1482346405201" expanded="true" signature="154916:154928" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="154984:154996" ph="..." />
-            <marker date="1482346405201" expanded="true" signature="155053:155064" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -973,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="338" column="21" lean-forward="false" selection-start-line="338" selection-start-column="21" selection-end-line="338" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,20 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#1067#1450#2" expanded="false" />
-            <element signature="e#2577#2784#2" expanded="false" />
-            <element signature="e#3057#3372#2" expanded="false" />
-            <element signature="e#3924#4235#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="58" column="4" lean-forward="true" selection-start-line="58" selection-start-column="4" selection-end-line="72" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,22 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ferienhausWeb/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1045,14 +1057,6 @@
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,27 +1068,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/preise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="e#574#580#0#HTML" expanded="true" />
+            <element signature="e#713#719#1#HTML" expanded="true" />
+            <element signature="e#840#846#1#HTML" expanded="true" />
+            <element signature="e#1025#1031#1#HTML" expanded="true" />
+            <element signature="e#1138#1144#0#HTML" expanded="true" />
+            <element signature="e#1148#1154#0#HTML" expanded="true" />
+            <element signature="e#1261#1267#0#HTML" expanded="true" />
+            <element signature="e#1271#1277#0#HTML" expanded="true" />
+            <element signature="e#1467#1473#1#HTML" expanded="true" />
+            <element signature="e#1580#1586#0#HTML" expanded="true" />
+            <element signature="e#1589#1595#0#HTML" expanded="true" />
+            <element signature="e#1702#1708#0#HTML" expanded="true" />
+            <element signature="e#1711#1717#0#HTML" expanded="true" />
+            <element signature="e#1895#1901#1#HTML" expanded="true" />
+            <element signature="e#2008#2014#0#HTML" expanded="true" />
+            <element signature="e#2017#2023#0#HTML" expanded="true" />
+            <element signature="e#2130#2136#0#HTML" expanded="true" />
+            <element signature="e#2139#2145#0#HTML" expanded="true" />
+            <element signature="e#2512#2518#0#HTML" expanded="true" />
+            <element signature="e#2646#2652#0#HTML" expanded="true" />
+            <element signature="e#2814#2820#0#HTML" expanded="true" />
+            <element signature="e#2947#2953#0#HTML" expanded="true" />
+            <element signature="e#3110#3116#0#HTML" expanded="true" />
+            <element signature="e#3250#3256#0#HTML" expanded="true" />
+            <element signature="e#3404#3410#0#HTML" expanded="true" />
+            <element signature="e#3548#3554#1#HTML" expanded="true" />
+            <element signature="e#3723#3729#0#HTML" expanded="true" />
+            <element signature="e#3863#3869#0#HTML" expanded="true" />
+            <element signature="e#4017#4023#0#HTML" expanded="true" />
+            <element signature="e#4148#4154#0#HTML" expanded="true" />
+            <element signature="e#4156#4162#0#HTML" expanded="true" />
+            <element signature="e#4341#4347#0#HTML" expanded="true" />
+            <element signature="e#4354#4360#0#HTML" expanded="true" />
+            <element signature="e#4428#4434#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="61" column="88" lean-forward="false" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/ferienhaus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="98" lean-forward="false" selection-start-line="27" selection-start-column="98" selection-end-line="27" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/belegungskalender.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="17">
           <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/gaestebuch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ferienhausWeb/static/css/ferienhausWeb.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="214" column="14" lean-forward="false" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+        <state relative-caret-position="574">
+          <caret line="219" column="21" lean-forward="false" selection-start-line="219" selection-start-column="21" selection-end-line="219" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/umgebung.html">
+    <entry file="file://$PROJECT_DIR$/ferienhausWeb/templates/ferienhausWeb/parts/sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="61" column="88" lean-forward="false" selection-start-line="61" selection-start-column="88" selection-end-line="61" selection-end-column="88" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
