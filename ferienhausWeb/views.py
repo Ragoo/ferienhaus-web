@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from .forms import PostForm,TripForm,GuestbookForm,GaleryImageForm
+from .forms import PostForm,TripForm,GuestbookForm,GaleryImageForm,TextForm
 from datetime import date, datetime, timedelta
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
@@ -16,6 +16,7 @@ from django.shortcuts import render
 
 def home(request):
     post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    texts = desc_text.objects.filter(title='home')
     paginator = Paginator(post_list, 3)  # Show 3 contacts per page
 
     page = request.GET.get('page')
@@ -27,11 +28,12 @@ def home(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'ferienhausWeb/home.html', {'posts': posts})
+    return render(request, 'ferienhausWeb/home.html', {'posts': posts, 'texts':texts})
 
 
 def ferienhaus(request):
-    return render(request, 'ferienhausWeb/ferienhaus.html', {})
+    texts = desc_text.objects.filter(title='ferienhaus_desc')
+    return render(request, 'ferienhausWeb/ferienhaus.html', {'texts':texts})
 
 
 def ferienhaus_galerie(request):
@@ -39,7 +41,8 @@ def ferienhaus_galerie(request):
     return render(request, 'ferienhausWeb/ferienhaus_galerie.html', {'galeryimage': galeryimage})
 
 def preise(request):
-    return render(request, 'ferienhausWeb/preise.html', {})
+    texts = desc_text.objects.filter(title='preise')
+    return render(request, 'ferienhausWeb/preise.html', {'texts':texts})
 
 
 def belegungskalender(request):
@@ -173,6 +176,19 @@ def galeryimage_remove(request, pk):
     galeryimage = get_object_or_404(GaleryImage, pk=pk)
     galeryimage.delete()
     return redirect('ferienhaus_galerie')
+
+@login_required
+def text_edit(request, pk):
+    text = get_object_or_404(desc_text, pk=pk)
+    if request.method == "POST":
+        form = TextForm(request.POST, instance=text)
+        if form.is_valid():
+            text = form.save(commit=False)
+            text.save()
+            return redirect('home')
+    else:
+        form = TextForm(instance=text)
+    return render(request, 'ferienhausWeb/text_edit.html', {'form': form})
 
 #Calendar
 

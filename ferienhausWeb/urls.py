@@ -24,7 +24,10 @@ urlpatterns = [
     url(r'^galeryimage/new/$', views.galeryimage_new, name='galeryimage_new'),
     url(r'^galeryimage/(?P<pk>\d+)/remove/$', views.galeryimage_remove, name='galeryimage_remove'),
 
-    url(r'^belegungskalender/$', TemplateView.as_view(template_name='ferienhausWeb/belegungskalender.html'),name='belegungskalender'),
+    url(r'^belegungskalender/$', TemplateView.as_view(template_name='ferienhausWeb/belegungskalender.html'),
+        name='belegungskalender'),
     url(r'^eventsXML/$', views.eventsXML, name='eventsXML'),
     url(r'^dataprocessor/$', views.dataprocessor, name='dataprocessor'),
+
+    url(r'^text/(?P<pk>\d+)/edit/$', views.text_edit, name='text_edit'),
 ]

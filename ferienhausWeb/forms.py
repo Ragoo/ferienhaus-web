@@ -1,6 +1,6 @@
 # coding=utf-8
 from django import forms
-from .models import Post,Trip,GuestBook,GaleryImage
+from .models import Post,Trip,GuestBook,GaleryImage,desc_text
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 class PostForm(forms.ModelForm):
@@ -30,3 +30,9 @@ class GaleryImageForm(forms.ModelForm):
     class Meta:
         model = GaleryImage
         fields = ('title','text','image',)
+
+class TextForm(forms.ModelForm):
+
+    class Meta:
+        model = desc_text
+        fields = ('text',)

@@ -2,37 +2,14 @@
 {% load staticfiles %}
 {% block content %}
     <div class="home-greeting">
-        <h1> Herzlich Willkommen!</h1>
-        <p id="home-greeting-text">Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-
-            <img class="image-home" src="{% static "img/01_Das Haus.jpg" %}">
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-            Dies ist die Seite unseres Ferienhauses in Altfunnixsiel!
-            Hier können Sie sich über das Ferienhaus informieren, im Belegungskalender freie Termine
-            suchen oder etwas über die verschiedenen Reiseziele in der Umgebung erfahren.
-
-        </p>
-
+    {% for this_text in texts %}
+        {{ this_text.text|safe }}
+        {% if user.is_authenticated %}
+                <a class="btn btn-default admin-button" href="{% url 'text_edit' pk=this_text.pk %}">Bearbeiten</a>
+        {% endif %}
+        {% endfor %}
     </div>
+
     {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" class="btn btn-default admin-button">Neu erstellen</a>
     {% endif %}

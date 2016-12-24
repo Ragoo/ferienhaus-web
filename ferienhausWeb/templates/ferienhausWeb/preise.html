@@ -11,131 +11,16 @@
      <a href="{% url 'preise' %}">Preise</a>
     </div>
 
+    <div class="home-greeting">
+{% for this_text in texts %}
+        {{ this_text.text|safe }}
+        {% if user.is_authenticated %}
+                <a class="btn btn-default admin-button" href="{% url 'text_edit' pk=this_text.pk %}">Bearbeiten</a>
+        {% endif %}
+        {% endfor %}
+
+</div>
         <div>
-            <h1> Die Preise</h1>
-        <table border="0" cellspacing="0" cellpadding="4" width="100%">
 
-            <tr bgcolor="#307195">
-	                    <td class="cellheader" align="left" valign="top">
-      	        &nbsp;</font>
-	  	  </td>
-                <td class="cellheader" align="left" valign="top" color="white">
-      	        <b>2 Personen </b>&nbsp;</font>
-	  	  </td>
-                <td class="cellheader" align="left" valign="top">
-      	        <b>ab 3 Personen</b>&nbsp;</font>
-	  	  </td>
-    </tr>
-      <tr bgcolor="white">
-                              <td class="cellheader" align="left" valign="top">
-              	        <b>Hauptsaison </b>&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 50 &nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 58 &nbsp;</font>
-	  	  </td>
-    </tr>
-            <tr bgcolor="#307195">
-	                              <td class="cellheader" align="left" valign="top">
-              	        <b>Zwischensaison</b>&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 40&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 45&nbsp;</font>
-	  	  </td>
-    </tr>
-      <tr bgcolor="white">
-                              <td class="cellheader" align="left" valign="top">
-              	        <b>Nebensaison</b>&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 30&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        &euro; 35&nbsp;</font>
-	  	  </td>
-    </tr>
-</table>
-<br><br></td>
-  <td></td>
-  </tr>
-      <tr>
-  <td>
-  </td>
-  <td valign="top"><h1><a name="00000097440d57815"></a><br></h1>
-<table border="0" cellspacing="0" cellpadding="4" width="100%">
-
-            <tr bgcolor="#307195">
-	                              <td class="cell" align="left" valign="top">
-		      	        Hauptsaison&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        01. Juli - 31. August&nbsp;</font>
-	  	  </td>
-    </tr>
-      <tr bgcolor="white">
-                              <td class="cell" align="left" valign="top">
-		      	        Zwischensaison&nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        01. April - 30. Juni&nbsp;</font>
-	  	  </td>
-    </tr>
-            <tr bgcolor="#307195">
-	                              <td class="cell" align="left" valign="top">
-		      	        &nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        01. September - 31. Oktober&nbsp;</font>
-	  	  </td>
-    </tr>
-      <tr bgcolor="white">
-                              <td class="cell" align="left" valign="top">
-		      	        &nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        24. Dezember - 01. Januar<br />&nbsp;</font>
-	  	  </td>
-    </tr>
-            <tr bgcolor="#307195">
-	                              <td class="cell" align="left" valign="top">
-		      	        Nebensaison &nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        01. November - 23. Dezember&nbsp;</font>
-	  	  </td>
-    </tr>
-      <tr bgcolor="white">
-                              <td class="cell" align="left" valign="top">
-		      	        &nbsp;</font>
-	  	  </td>
-                          <td class="cell" align="left" valign="top">
-		      	        02. Januar - 31. M&auml;rz&nbsp;</font>
-	  	  </td>
-    </tr>
-</table>
-<br><br></td>
-  <td></td>
-  </tr>
-      <tr>
-  <td>
-  </td>
-  <td valign="top"><h1><a name="00000097440d63516"></a><br></h1>
-<p>Preis gilt f&uuml;r eine &Uuml;bernachtung.<br><br>In der  Hochsaison nur von Samstag bis Samstag m&ouml;glich.<br><br>Bettwäsche und Handtücher sind selber mitzubringen.<br><br>Zusätzliche Kosten sind 40,-€ für die Endreinigung und die ortsübliche Kurtaxe (1,50€ für Erw.,0,90€ Kind ab 4 Jahre; pro Person und Tag).<br><br></td>
-  <td></td>
-  </tr>
-
-
-</table>
-</td>
-<td valign="top"><table cellpadding="0" cellspacing="0" border="0">
-</table></td>
-
-
-</tr>
         </div>
 {% endblock %}
