@@ -10,7 +10,7 @@
     <div class="sub-nav">
      <a href="{% url 'preise' %}">Preise</a>
     </div>
-<div class="home-greeting">
+<div>
 {% for this_text in texts %}
         {{ this_text.text|safe }}
         {% if user.is_authenticated %}

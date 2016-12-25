@@ -133,10 +133,7 @@ body {
     background-color: #307195;
     padding: 5px 10px;
     margin: 0 0 20px 0;
-    border-top: solid 2px #307195;
-    border-bottom: solid 2px #307195;
-    border-right: solid 2px black;
-    border-left: solid 2px black;
+    border: solid 2px black;
 }
 
 .sub-nav a {

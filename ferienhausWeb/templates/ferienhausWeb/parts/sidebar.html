@@ -18,11 +18,10 @@
     </div>
 </div>
 <div id="Kontakt">
-    <p style="font-weight: bold"><br>Kontakt:</p>
-    <p>
-        Claudia Schoneville<br>
-        Tel.-Nr.: 0591 / 65986<br>
-        E-Mail: c.schoneville@web.de
-
-    </p>
+    {% for side_text in sidebar_text %}
+        {{ side_text.text|safe }}
+        {% if user.is_authenticated %}
+                <a class="btn btn-default admin-button" href="{% url 'text_edit' pk=side_text.pk %}">Bearbeiten</a>
+        {% endif %}
+        {% endfor %}
 </div>
