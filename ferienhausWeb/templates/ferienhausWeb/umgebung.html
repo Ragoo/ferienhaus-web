@@ -83,7 +83,7 @@
                     ['Meerwasser Freibad Harlesiel', 'swimming', 'Freibad', 53.709074, 7.808564, 23]
                     {% for marker in markers %}
                         {% autoescape off %}
-                    ,['{{ marker.info_text|safe|linebreaksbr }}', '{{ marker.icon.name }}', '{{ marker.title }}', {{ marker.coordinates }}, 24]
+                    ,['{{ marker.info_text|striptags|linebreaksbr }}', '{{ marker.icon.name }}', '{{ marker.title }}', {{ marker.coordinates }}, 24]
                         {% endautoescape%}
                     {% endfor %}
 
