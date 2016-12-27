@@ -57,9 +57,11 @@ def umgebung(request):
 
 
 def trip_detail(request, pk):
+    markericons = markerIcon.objects.order_by('name')
+    markers = marker.objects.order_by('icon')
     trip = get_object_or_404(Trip, pk=pk)
     trips = Trip.objects.order_by('title')
-    return render(request, 'ferienhausWeb/trip_detail.html', {'trip': trip, 'trips': trips})
+    return render(request, 'ferienhausWeb/trip_detail.html', {'trip': trip, 'trips': trips,'markericons': markericons,'markers': markers})
 
 
 def guestbook(request):
