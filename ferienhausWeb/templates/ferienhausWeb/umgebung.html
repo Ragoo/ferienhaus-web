@@ -30,26 +30,8 @@
                 });
                 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
                 var icons = {
-                    beach: {
-                        icon: "{% static "img/gm-icons/beach-export.png" %}"
-                    },
                     home: {
                         icon: "{% static "img/gm-icons/home-2.png" %}"
-                    },
-                    supermarket: {
-                        icon: "{% static "img/gm-icons/supermarket.png" %}"
-                    },
-                    mall: {
-                        icon: "{% static "img/gm-icons/mall.png" %}"
-                    },
-                    harbor: {
-                        icon: "{% static "img/gm-icons/harbor.png" %}"
-                    },
-                    cruise: {
-                        icon: "{% static "img/gm-icons/cruiseship.png" %}"
-                    },
-                    swimming: {
-                        icon: "{% static "img/gm-icons/swimming2.png" %}"
                     }
                 {% for markericon in markericons %}
                     ,{{ markericon.name }}: {
@@ -58,29 +40,7 @@
                 };
 
                 var locations = [
-                    ['Das Ferienhaus in Altfunnixsiel', 'home', 'Ferienhaus', 53.653737, 7.784394, 1],
-                    ['Strand Harlesiel', 'beach', 'Strand', 53.710158, 7.806407, 2],
-                    ['Strand Neuharlingersiel', 'beach', 'Strand', 53.702012, 7.698976, 3],
-                    ['Strand Bensersiel', 'beach', 'Strand', 53.677858, 7.568072, 4],
-                    ['Strand Dornumersiel', 'beach', 'Strand', 53.681947, 7.484571, 5],
-                    ['Hundestrand Schillig', 'beach', 'Hundestrand', 53.707151, 8.027575, 6],
-                    ['Einkaufsmöglichkeit Wittmund', 'supermarket', 'Einkaufen', 53.584919, 7.770721, 7],
-                    ['Netto Caroliensiel', 'supermarket', 'Einkaufen', 53.688285, 7.801632, 8],
-                    ['Innenstadt und Einkaufscenter <br> Wilhelmshaven', 'mall', 'Shoppen', 53.521011, 8.110690, 9],
-                    ['Innenstadt Jever', 'mall', 'Shoppen', 53.574272,  7.902057, 10],
-                    ['Innenstadt Esens', 'mall', 'Shoppen', 53.646042, 7.613320, 11],
-                    ['Innenstadt Wittmund', 'mall', 'Shoppen', 53.576966, 7.780988, 12],
-                    ['Alter Hafen Caroliensiel<br>mit dem Hafenmuseum', 'harbor', 'Alter Hafen', 53.691149, 7.801861, 13],
-                    ['Hafen Wilhelmshaven', 'harbor', 'Hafen', 53.520569, 8.127814, 14],
-                    ['Schifffahrt <br> Harlesiel - Wangenrooge', 'cruise', 'Fähre', 53.708437, 7.809042, 15],
-                    ['Schifffahrt <br> Wangenrooge - Harlesiel', 'cruise', 'Fähre', 53.775279,  7.867229, 16],
-                    ['Schifffahrt <br> Neuharlingersiel - Spiekeroog', 'cruise', 'Fähre', 53.700981, 7.705387, 17],
-                    ['Schifffahrt <br> Spiekeroog - Neuharlingersiel', 'cruise', 'Fähre', 53.764331, 7.695471, 18],
-                    ['Schifffahrt <br> Bensersiel - Langeoog', 'cruise', 'Fähre', 53.677887, 7.573102, 19],
-                    ['Schifffahrt <br> Langeoog - Bensersiel', 'cruise', 'Fähre', 53.725490, 7.496213, 20],
-                    ['Cliner Quelle Solenhallenbad', 'swimming', 'Hallenbad', 53.696023, 7.806175, 21],
-                    ['Nordseetherme Bensersiel', 'swimming', 'Hallenbad', 53.675780, 7.579493, 22],
-                    ['Meerwasser Freibad Harlesiel', 'swimming', 'Freibad', 53.709074, 7.808564, 23]
+                    ['Das Ferienhaus in Altfunnixsiel', 'home', 'Ferienhaus', 53.653737, 7.784394, 1]
                     {% for marker in markers %}
                         {% autoescape off %}
                     ,['{{ marker.info_text|striptags|linebreaksbr }}', '{{ marker.icon.name }}', '{{ marker.title }}', {{ marker.coordinates }}, 24]
@@ -115,6 +75,13 @@
         </script>
 
     </div>
+{% if user.is_authenticated %}
+                <a class="btn btn-default admin-button" href="{% url 'marker_list' %}">Marker Liste</a>
+                <a class="btn btn-default admin-button" href="{% url 'markericon_list' %}">Marker Icons</a>
+            {% endif %}
+
+    {% block markerlist %}
+    {% endblock %}
 
 
 {% endblock %}

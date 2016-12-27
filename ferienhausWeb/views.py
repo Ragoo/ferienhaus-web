@@ -184,9 +184,10 @@ def galeryimage_remove(request, pk):
     return redirect('ferienhaus_galerie')
 
 
-
+@login_required
 def markericon_list(request):
     markericons = markerIcon.objects.order_by('name')
+    trips = Trip.objects.order_by('title')
     if request.method == "POST":
         form = MarkerIconForm(request.POST, request.FILES)
         if form.is_valid():
@@ -195,10 +196,35 @@ def markericon_list(request):
             return redirect('markericon_list')
     else:
         form = MarkerIconForm()
-    return render(request, 'ferienhausWeb/markericon_list.html', {'markericons': markericons, 'form':form})
+    return render(request, 'ferienhausWeb/markericon_list.html', {'trips': trips,'markericons': markericons, 'form':form})
 
+@login_required
+def markericon_remove(request, pk):
+    markericon_ = get_object_or_404(markerIcon, pk=pk)
+    markericon_.delete()
+    return redirect('markericon_list')
+
+@login_required
+def markericon_edit(request, pk):
+    markericon_ = get_object_or_404(markerIcon, pk=pk)
+    markers = marker.objects.order_by('icon')
+    markericons = markerIcon.objects.all()
+    trips = Trip.objects.order_by('title')
+    if request.method == "POST":
+        form = MarkerIconForm(request.POST, instance=markericon_)
+        if form.is_valid():
+            markericon_ = form.save(commit=False)
+            markericon_.save()
+            return redirect('markericon_list')
+    else:
+        form = MarkerIconForm(instance=markericon_)
+    return render(request, 'ferienhausWeb/markericon_list.html', {'trips': trips,'markers': markers,'form': form, 'markericons':markericons})
+
+@login_required
 def marker_list(request):
     markers = marker.objects.order_by('icon')
+    trips = Trip.objects.order_by('title')
+    markericons = markerIcon.objects.all()
     if request.method == "POST":
         form = MarkerForm(request.POST)
         if form.is_valid():
@@ -207,7 +233,30 @@ def marker_list(request):
             return redirect('marker_list')
     else:
         form = MarkerForm()
-    return render(request, 'ferienhausWeb/marker_list.html', {'markers': markers, 'form':form})
+    return render(request, 'ferienhausWeb/marker_list.html', {'trips': trips,'markers': markers, 'form':form, 'markericons':markericons})
+
+@login_required
+def marker_remove(request, pk):
+    marker_ = get_object_or_404(marker, pk=pk)
+    marker_.delete()
+    return redirect('marker_list')
+
+@login_required
+def marker_edit(request, pk):
+    marker_ = get_object_or_404(marker, pk=pk)
+    markers = marker.objects.order_by('icon')
+    markericons = markerIcon.objects.all()
+    trips = Trip.objects.order_by('title')
+    if request.method == "POST":
+        form = MarkerForm(request.POST, instance=marker_)
+        if form.is_valid():
+            marker_ = form.save(commit=False)
+            marker_.save()
+            return redirect('marker_list')
+    else:
+        form = MarkerForm(instance=marker_)
+    return render(request, 'ferienhausWeb/marker_list.html', {'trips': trips,'markers': markers,'form': form, 'markericons':markericons})
+
 
 @login_required
 def text_edit(request, pk):

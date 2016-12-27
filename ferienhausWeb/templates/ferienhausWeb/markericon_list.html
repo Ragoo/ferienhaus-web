@@ -1,23 +1,33 @@
-{% extends 'ferienhausWeb/base.html' %}
+{% extends 'ferienhausWeb/umgebung.html' %}
 {% load staticfiles %}
 
-{% block content %}
+{% block markerlist %}
 
-{% for markericon in markericons %}
-<div class="markericon_entry">
-   <table>
-       <tr>
-       <td>
-           {{ markericon.name }}
-       </td>
-           <td>
-             <img class="markericon_img" src="{{ markericon.image.url }}">
-       </td>
-       </tr>
+    {% for markericon in markericons %}
+        <div class="markericon_entry">
+            <table class="list-table">
+                <tr>
+                    <td>
+                        <img class="markericon_img" src="{{ markericon.image.url }}">
+                    </td>
+                    <td>
+                        {{ markericon.name }}
+                    </td>
+                    <td>
+                        <a class="btn btn-default"
+                           href="{% url 'markericon_edit' pk=markericon.pk %}">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-default"
+                           onclick="return confirm('Sicher, dass diese Neuigkeit gelöscht werden soll?')"
+                           href="{% url 'markericon_remove' pk=markericon.pk %}">X</a>
+                    </td>
 
-   </table>
-</div>
-{% endfor %}
+                </tr>
+
+            </table>
+        </div>
+    {% endfor %}
 
     <div id="markericon-form">
         <h3>Marker Icon erstellen</h3>

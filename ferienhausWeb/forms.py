@@ -7,7 +7,7 @@ from django.utils.safestring import mark_safe
 class CustomChoiceField(forms.ModelChoiceField):
 
     def label_from_instance(self, obj):
-        return mark_safe("<img src='%s'/>" % obj.image.url)
+        return mark_safe(" %s <br/> <img src='%s'/>" % (obj.name, obj.image.url))
 
 class HorizRadioRenderer(forms.RadioSelect.renderer):
     """ this overrides widget method to put radio buttons horizontally

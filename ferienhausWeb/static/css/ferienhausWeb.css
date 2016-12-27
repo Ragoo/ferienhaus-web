@@ -223,3 +223,16 @@ ul.galery-list li:hover {
 .leaflet-google-layer {
     z-index: 1 !important;
 }
+
+.list-table {
+    width: 100%;
+}
+
+.list-table td{
+    border:solid 1px #717171;
+    text-align: center;
+}
+
+.infowindow-text td{
+    text-align:left;
+}
