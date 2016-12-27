@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ferienhausWeb',
     'ckeditor',
     'ckeditor_uploader',
+    'location_field.apps.DefaultConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -143,6 +144,11 @@ CKEDITOR_CONFIGS = {
         'height': 300,
         'width': 700,
     },
+    'gmaps-edit': {
+        'toolbar': 'Basic',
+        'height': 300,
+        'width': 700,
+    }
 }
 
 LOGIN_REDIRECT_URL = '/'

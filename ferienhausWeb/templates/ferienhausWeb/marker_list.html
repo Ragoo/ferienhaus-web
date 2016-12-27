@@ -1,0 +1,38 @@
+{% extends 'ferienhausWeb/base.html' %}
+
+{% block content %}
+
+    {% for marker in markers %}
+        <div class="marker_entry">
+            <table>
+                <tr>
+                    <td>
+                        <img class="markericon_img" src="{{ marker.icon.image.url }}">
+                    </td>
+                    <td>
+                        {{ marker.title }}
+                    </td>
+                    <td>
+                        {{ marker.info_text|safe }}
+                    </td>
+                    <td>
+                        {{ marker.coordinates }}
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    {% endfor %}
+
+    <div id="marker-form">
+        <h3>Marker erstellen</h3>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button type="submit" onclick="return confirm('Wollen Sie diesen Marker wirklich hinzufügen?')"
+                    class="save btn btn-default">Marker hinzufügen
+            </button>
+        </form>
+    </div>
+
+{% endblock %}

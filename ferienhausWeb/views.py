@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from .forms import PostForm,TripForm,GuestbookForm,GaleryImageForm,TextForm
+from .forms import PostForm,TripForm,GuestbookForm,GaleryImageForm,TextForm,MarkerForm,MarkerIconForm
 from datetime import date, datetime, timedelta
 from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
@@ -51,7 +51,9 @@ def belegungskalender(request):
 
 def umgebung(request):
     trips = Trip.objects.order_by('title')
-    return render(request, 'ferienhausWeb/umgebung.html', {'trips': trips})
+    markers = marker.objects.all()
+    markericons = markerIcon.objects.all()
+    return render(request, 'ferienhausWeb/umgebung.html', {'trips': trips,'markers':markers,'markericons':markericons})
 
 
 def trip_detail(request, pk):
@@ -84,7 +86,6 @@ def guestbook(request):
     else:
         form = GuestbookForm()
     return render(request, 'ferienhausWeb/gaestebuch.html', {'guestbook_entries': guestbook_entries, 'form': form})
-
 
 """
 Post create, edit, delete
@@ -124,6 +125,10 @@ def post_remove(request, pk):
     post.delete()
     return redirect('home')
 
+"""
+Trip create, edit, delete (Umgebung)
+"""
+
 @login_required
 def trip_new(request):
     if request.method == "POST":
@@ -161,6 +166,7 @@ def guestbook_remove(request, pk):
     guestbook.delete()
     return redirect('guestbook')
 
+@login_required
 def galeryimage_new(request):
     if request.method == "POST":
         form = GaleryImageForm(request.POST, request.FILES)
@@ -176,6 +182,32 @@ def galeryimage_remove(request, pk):
     galeryimage = get_object_or_404(GaleryImage, pk=pk)
     galeryimage.delete()
     return redirect('ferienhaus_galerie')
+
+
+
+def markericon_list(request):
+    markericons = markerIcon.objects.order_by('name')
+    if request.method == "POST":
+        form = MarkerIconForm(request.POST, request.FILES)
+        if form.is_valid():
+            marker_icon = form.save(commit=False)
+            marker_icon.save()
+            return redirect('markericon_list')
+    else:
+        form = MarkerIconForm()
+    return render(request, 'ferienhausWeb/markericon_list.html', {'markericons': markericons, 'form':form})
+
+def marker_list(request):
+    markers = marker.objects.order_by('icon')
+    if request.method == "POST":
+        form = MarkerForm(request.POST)
+        if form.is_valid():
+            marker_ = form.save(commit=False)
+            marker_.save()
+            return redirect('marker_list')
+    else:
+        form = MarkerForm()
+    return render(request, 'ferienhausWeb/marker_list.html', {'markers': markers, 'form':form})
 
 @login_required
 def text_edit(request, pk):

@@ -10,6 +10,9 @@ urlpatterns = [
     url(r'^umgebung/$', views.umgebung, name='umgebung'),
     url(r'^umgebung/(?P<pk>\d+)/$', views.trip_detail, name='trip_detail'),
     url(r'^gaestebuch/$', views.guestbook, name='guestbook'),
+
+    url(r'^marker_list/$', views.marker_list, name='marker_list'),
+    url(r'^markericon_list/$', views.markericon_list, name='markericon_list'),
     # Forms
     url(r'^post/new/$', views.post_new, name='post_new'),
     url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),

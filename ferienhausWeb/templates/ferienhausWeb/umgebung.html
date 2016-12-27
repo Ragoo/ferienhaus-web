@@ -51,6 +51,10 @@
                     swimming: {
                         icon: "{% static "img/gm-icons/swimming2.png" %}"
                     }
+                {% for markericon in markericons %}
+                    ,{{ markericon.name }}: {
+                        icon:"{{ markericon.image.url }}"}
+                {% endfor %}
                 };
 
                 var locations = [
@@ -76,7 +80,12 @@
                     ['Schifffahrt <br> Langeoog - Bensersiel', 'cruise', 'Fähre', 53.725490, 7.496213, 20],
                     ['Cliner Quelle Solenhallenbad', 'swimming', 'Hallenbad', 53.696023, 7.806175, 21],
                     ['Nordseetherme Bensersiel', 'swimming', 'Hallenbad', 53.675780, 7.579493, 22],
-                    ['Meerwasser Freibad Harlesiel', 'swimming', 'Freibad', 53.709074, 7.808564, 22]
+                    ['Meerwasser Freibad Harlesiel', 'swimming', 'Freibad', 53.709074, 7.808564, 23]
+                    {% for marker in markers %}
+                        {% autoescape off %}
+                    ,['{{ marker.info_text|safe|linebreaksbr }}', '{{ marker.icon.name }}', '{{ marker.title }}', {{ marker.coordinates }}, 24]
+                        {% endautoescape%}
+                    {% endfor %}
 
                 ];
 
