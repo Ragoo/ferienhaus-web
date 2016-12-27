@@ -187,6 +187,7 @@ def galeryimage_remove(request, pk):
 @login_required
 def markericon_list(request):
     markericons = markerIcon.objects.order_by('name')
+    markers = marker.objects.order_by('icon')
     trips = Trip.objects.order_by('title')
     if request.method == "POST":
         form = MarkerIconForm(request.POST, request.FILES)
@@ -196,7 +197,7 @@ def markericon_list(request):
             return redirect('markericon_list')
     else:
         form = MarkerIconForm()
-    return render(request, 'ferienhausWeb/markericon_list.html', {'trips': trips,'markericons': markericons, 'form':form})
+    return render(request, 'ferienhausWeb/markericon_list.html', {'trips': trips,'markers': markers,'markericons': markericons, 'form':form})
 
 @login_required
 def markericon_remove(request, pk):
