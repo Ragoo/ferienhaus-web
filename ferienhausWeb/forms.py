@@ -62,4 +62,11 @@ class MarkerForm(forms.ModelForm):
 
     class Meta:
         model = marker
-        fields = ('title','info_text','coordinates','icon',)
+        fields = ('title','info_text','coordinates','icon','zIndex')
+        labels = {
+            'title': ('Titel'),
+            'info_text': ('Beschreibung'),
+            'coordinates': ('Koordinaten (Karte nutzen)'),
+            'icon': ('Icon'),
+            'zIndex': ('zIndex - zwischen 1 und 999 (umso höher der Wert, umso höher ist der Marker über anderen Markern)'),
+        }

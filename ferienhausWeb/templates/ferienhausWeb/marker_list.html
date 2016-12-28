@@ -16,6 +16,9 @@
                         {{ marker.info_text|safe }}
                     </td>
                     <td>
+                        {{ marker.zIndex }}
+                    </td>
+                    <td>
                         <a class="btn btn-default" href="{% url 'marker_edit' pk=marker.pk %}">Edit</a>
                     </td>
                     <td>

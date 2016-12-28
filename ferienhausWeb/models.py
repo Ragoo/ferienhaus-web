@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 import os
 from location_field.models.plain import PlainLocationField
+from django.core.validators import MaxValueValidator,MinValueValidator
 
 
 def get_image_path(instance, filename):
@@ -91,6 +92,7 @@ class marker(models.Model):
     info_text = RichTextUploadingField(config_name='gmaps-edit')
     coordinates = PlainLocationField(based_fields=['city'], zoom=10, default='53.653734673045015,7.784392833709716')
     icon = models.ForeignKey(markerIcon, on_delete=models.PROTECT, default=1)
+    zIndex = models.IntegerField(validators=[MaxValueValidator(999),MinValueValidator(1)],default=1)
 
     def __str__(self):
         return self.title
