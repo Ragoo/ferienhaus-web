@@ -24,7 +24,7 @@ SECRET_KEY = '=p3p+1!mn!7ga2u!f_m75hu-jrb=xj$(+3lz6ar@5p+94#8glv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.urlaub-in-altfunnixsiel.de','127.0.0.1']
+ALLOWED_HOSTS = ['www.urlaub-in-altfunnixsiel.de', '127.0.0.1']
 
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
@@ -135,6 +135,7 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
         'height': 300,
         'width': 700,
+        'language': 'de',
         'extraPlugins': ','.join([
             'image2'
         ]),
@@ -143,12 +144,14 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'Basic',
         'height': 300,
         'width': 700,
+        'language': 'de',
     },
     'gmaps-edit': {
         'toolbar': 'Basic',
         'height': 300,
         'width': 700,
-        'enterMode' : 2,
+        'enterMode': 2,
+        'language': 'de',
     }
 }
 
