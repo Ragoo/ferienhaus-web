@@ -3,6 +3,7 @@ from django import forms
 from .models import Post,Trip,GuestBook,GaleryImage,desc_text,markerIcon,marker
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django.utils.safestring import mark_safe
+from captcha.fields import ReCaptchaField
 
 class CustomChoiceField(forms.ModelChoiceField):
 
@@ -30,6 +31,7 @@ class TripForm(forms.ModelForm):
         fields = ('title','text',)
 
 class GuestbookForm(forms.ModelForm):
+    captcha = ReCaptchaField()
 
     class Meta:
         model = GuestBook

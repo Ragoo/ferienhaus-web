@@ -21,8 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '=p3p+1!mn!7ga2u!f_m75hu-jrb=xj$(+3lz6ar@5p+94#8glv'
 
+# Captcha keys
+RECAPTCHA_PUBLIC_KEY = '6LcfpLUUAAAAAAWaSRsigt90pHSNw1OR8BmHdO7J'
+RECAPTCHA_PRIVATE_KEY = '6LcfpLUUAAAAAPVGst8NI_ppcUdiIJWK4kxp17Qn'
+NOCAPTCHA = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.urlaub-in-altfunnixsiel.de', '127.0.0.1']
 
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'location_field.apps.DefaultConfig',
+    'captcha',
 ]
 
 MIDDLEWARE_CLASSES = [
