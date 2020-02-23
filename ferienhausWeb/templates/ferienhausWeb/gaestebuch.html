@@ -51,7 +51,8 @@
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.media}}
         {{ form.as_p }}
-        <button type="submit" onclick="return confirm('Wollen Sie diesen Gästebucheintrag wirklich hinzufügen?')" class="save btn btn-default">Eintrag hinzufügen</button>
+       <!-- <button type="submit" onclick="return confirm('Wollen Sie diesen Gästebucheintrag wirklich hinzufügen?')" class="save btn btn-default">Eintrag hinzufügen</button>
+       -->
     </form>
 </div>
 {% endblock %}
