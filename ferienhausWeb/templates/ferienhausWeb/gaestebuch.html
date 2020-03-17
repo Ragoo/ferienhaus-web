@@ -1,3 +1,4 @@
+{% load honeypot %}
 {% extends 'ferienhausWeb/base.html' %}
 
 {% block content %}
@@ -48,7 +49,7 @@
 
 <div id="guestbook-form">
     <h3>Gästebucheintrag erstellen</h3>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form">{% render_honeypot_field "text_2" %} {% csrf_token %}
         {{ form.media}}
         {{ form.as_p }}
        <!-- <button type="submit" onclick="return confirm('Wollen Sie diesen Gästebucheintrag wirklich hinzufügen?')" class="save btn btn-default">Eintrag hinzufügen</button>

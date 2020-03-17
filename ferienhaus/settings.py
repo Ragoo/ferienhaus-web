@@ -26,6 +26,9 @@ RECAPTCHA_PUBLIC_KEY = '6LcfpLUUAAAAAAWaSRsigt90pHSNw1OR8BmHdO7J'
 RECAPTCHA_PRIVATE_KEY = '6LcfpLUUAAAAAPVGst8NI_ppcUdiIJWK4kxp17Qn'
 NOCAPTCHA = True
 
+#honeypoy
+HONEYPOT_FIELD_NAME = 'text_2'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -47,6 +50,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'location_field.apps.DefaultConfig',
     'captcha',
+    'honeypot'
 ]
 
 MIDDLEWARE_CLASSES = [
