@@ -10,7 +10,7 @@ from django.template import RequestContext
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
-
+from honeypot.decorators import check_honeypot
 
 # Create your views here.
 
@@ -63,7 +63,7 @@ def trip_detail(request, pk):
     trips = Trip.objects.order_by('title')
     return render(request, 'ferienhausWeb/trip_detail.html', {'trip': trip, 'trips': trips,'markericons': markericons,'markers': markers})
 
-
+@check_honeypot(field_name='text_2')
 def guestbook(request):
     #guestbook_entries = GuestBook.objects.order_by('-created_date')
     guestbook_list = GuestBook.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
